@@ -1,6 +1,7 @@
 package com.patti.models;
 
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
@@ -16,6 +17,7 @@ import java.util.List;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonDeserialize(as = Category.class)
 public class Category extends BaseModel{
     @Column(nullable = false, unique = true)
     private String name;

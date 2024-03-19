@@ -2,6 +2,7 @@ package com.patti.Ecommerce;
 
 import com.patti.dtos.FakeStoreProductDto;
 import com.patti.dtos.GenericProductDto;
+import com.patti.dtos.SearchRequestDTO;
 import com.patti.security.JWTObject;
 import com.patti.security.TokenValidator;
 import org.springframework.stereotype.Service;

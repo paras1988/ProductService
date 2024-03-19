@@ -6,6 +6,7 @@ import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.oauth2.jwt.JwtDecoder;
 
 @Configuration
 @EnableWebSecurity
@@ -16,10 +17,10 @@ public class SpringSecurityConfig {
             throws Exception {
         http
                 .authorizeHttpRequests((authorize) -> authorize
-                        .requestMatchers("/products").hasAnyAuthority("ADMIN","admin")
-                        //.anyRequest().authenticated()
-                        //.requestMatchers("/getProducts").permitAll()
-                        .anyRequest().authenticated()
+                        //.requestMatchers("/products").hasAnyAuthority("ADMIN","admin")
+                        //.anyRequest().permitAll()
+                        //.requestMatchers("/products").permitAll()
+                        .anyRequest().permitAll()
                 )
                 .csrf().disable()
                 .cors().disable()

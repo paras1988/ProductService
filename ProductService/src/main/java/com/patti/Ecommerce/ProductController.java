@@ -23,6 +23,7 @@ public class ProductController {
 
     @GetMapping("/{id}")
     public GenericProductDto getProductById(@RequestHeader("Authorization") String authToken,@PathVariable("id") Long id){
+        //this authToken is not needed in spring security
         return productService.getProductById(authToken,id);
     }
 

@@ -3,6 +3,7 @@ package com.patti.Ecommerce;
 
 import com.patti.dtos.FakeStoreProductDto;
 import com.patti.dtos.GenericProductDto;
+import com.patti.dtos.SearchRequestDTO;
 
 import java.util.List;
 
@@ -12,5 +13,4 @@ public interface ProductService {
     List<GenericProductDto> getAllProducts();
 
     GenericProductDto deleteProductById(Long id);
-
 }
