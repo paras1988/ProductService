@@ -35,6 +35,11 @@ public class FakeStoreProductService implements ProductService{
     }
 
     @Override
+    public GenericProductDto getProductById(Long id) {
+        return convertToGenericProductDto(fakeStoreClient.getProductById(id));
+    }
+
+    @Override
     public List<GenericProductDto> getAllProducts() {
         List<GenericProductDto> genericProductDtos= new ArrayList<>();
         for(FakeStoreProductDto fakeStoreProductDto:fakeStoreClient.getAllProducts()){
