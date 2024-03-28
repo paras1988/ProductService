@@ -30,4 +30,7 @@ public class SearchService {
         Page<GenericProductDto> page = new PageImpl<>(genericProductDtos, pageRequest, genericProductDtos.size());
         return page;
     }
+
+
+
 }
